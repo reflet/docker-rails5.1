@@ -1,0 +1,21 @@
+version: '2'
+services:
+  rails:
+    build: .
+    image: my/rails5.1
+    container_name: 'rails'
+    ports:
+      - "80:3000"
+    environment:
+      APP_DATABASE: 'example'
+      APP_DATABASE_USER: 'app'
+      APP_DATABASE_PASSWORD: 'development'
+    volumes:
+      - rails-data:/usr/local/src
+
+volumes:
+  rails-data:
+    driver_opts:
+      type: none
+      device: ${PWD}/src/
+      o: bind
