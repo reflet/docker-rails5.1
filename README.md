@@ -66,18 +66,6 @@ $ docker-compose exec rails rake assets:precompile
 
 　
 
-### MySQL情報
-SequelProのような好きなツールでアクセスできます。
-
-```
-HOST: 192.168.99.100
-PORT: 33306
-USER: app
-PASSWORD: development
-```
-
-　
-
 ### コンテナの停止
 ```
 $ docker-compose stop
