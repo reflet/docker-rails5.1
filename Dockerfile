@@ -26,9 +26,6 @@ WORKDIR $WORKSPACE
 # install ruby on rails.
 ADD --chown=rails:rails src $WORKSPACE
 RUN bundle install
-RUN bundle exec rake db:create && \
-    bundle exec rake db:migrate && \
-    bundle exec rake assets:precompile
 
 EXPOSE  3000
 CMD ["rails", "server", "-b", "0.0.0.0"]

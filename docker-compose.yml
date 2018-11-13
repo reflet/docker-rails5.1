@@ -6,10 +6,6 @@ services:
     container_name: 'rails'
     ports:
       - "80:3000"
-    environment:
-      APP_DATABASE: 'example'
-      APP_DATABASE_USER: 'app'
-      APP_DATABASE_PASSWORD: 'development'
     volumes:
       - rails-data:/usr/local/src
 
