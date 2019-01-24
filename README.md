@@ -14,7 +14,7 @@
 ### ■ ファイルの配置
 gitコマンドにてファイルを配置します。
 
-```
+```bash
 $ mkdir -p ~/rails5.1 && cd ~/rails5.1
 $ git clone git@github.com:reflet/docker-rails5.1.git .
 ```
@@ -24,7 +24,7 @@ $ git clone git@github.com:reflet/docker-rails5.1.git .
 ### ■ コンテナ起動
 下記コマンドでdockerコンテナを起動します。
 
-```
+```bash
 $ docker-compose up -d --build
 ```
 
@@ -32,7 +32,7 @@ $ docker-compose up -d --build
 ### マイグレーション
 データベースにマイグレーションを実行したい場合は、下記のコマンドで実行できます。
 
-```
+```bash
 $ docker-compose exec rails rake db:migrate
 ```
 
@@ -41,8 +41,8 @@ $ docker-compose exec rails rake db:migrate
 ### 動作確認
 ブラウザでアクセスしてみる。
 
-```ｓｈ
-192.168.99.100
+```bash
+$ open http://192.168.99.100
 ```
 
 　
@@ -50,7 +50,7 @@ $ docker-compose exec rails rake db:migrate
 ### ruby on railsの各種操作
 railsコマンドで操作できる各種コマンドを実行したい場合は、下記のように実行できます。
 
-```
+```bash
 # Gemfileを変更した時のりライブラリ更新
 $ docker-compose exec rails bundle update
 
@@ -67,13 +67,13 @@ $ docker-compose exec rails rake assets:precompile
 　
 
 ### コンテナの停止
-```
+```bash
 $ docker-compose stop
 ```
 
 　
 
 ### コンテナの破棄
-```
+```bash
 $ docker-compose down -v
 ```
